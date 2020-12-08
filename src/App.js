@@ -6,6 +6,7 @@ function App() {
     <Layout>
       <div style={{width: 400, border: '1px solid black'}}>
         <h1>info</h1>
+
       </div>
     </Layout>
   );
