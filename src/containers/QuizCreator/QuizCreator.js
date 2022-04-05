@@ -5,12 +5,14 @@ import Input from '../../components/ActiveQuiz/UI/Input/Input'
 import Select from '../../components/ActiveQuiz/UI/Select/Select'
 import {createControl, validate, validateForm} from '../../form/Form';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
-import axios from '../../axios/axios-quiz';
+import {createTestHandler, finishTestCreate} from "../../store/actions/create";
+import {connect} from "react-redux";
 
 function createOptionControl(number) {
     return createControl({
         label: `Answer ${number}`,
-        errorMessage: 'Answer field can not be empty'
+        errorMessage: 'Answer field can not be empty',
+        id: number
     }, {required: true})
 }
 
@@ -27,10 +29,9 @@ function createFormControls() {
     }
 }
 
-export default class QuizCreator extends Component {
+class QuizCreator extends Component {
 
     state = {
-        quiz: [],
         isFormValid: false,
         formControls: createFormControls(),
         rightAnswerId: 1
@@ -43,14 +44,11 @@ export default class QuizCreator extends Component {
     addQuestionHandler = event => {
         event.preventDefault();
 
-        const quiz = this.state.quiz.concat();
-        const index = quiz.length + 1;
-
         const {question, option1, option2, option3, option4} = this.state.formControls;
 
         const questionItem = {
-            question: question,
-            id: index,
+            question: question.value,
+            id: this.props.length + 1,
             rightAnswerId: this.state.rightAnswerId,
             answers: [
                 {text: option1.value, id: option1.id},
@@ -60,42 +58,25 @@ export default class QuizCreator extends Component {
             ]
         }
 
-        quiz.push(questionItem)
+        this.props.createTestHandler(questionItem)
 
         this.setState({
-            quiz,
             isFormValid: false,
             formControls: createFormControls(),
             rightAnswerId: 1
         })
     }
 
-    createTestHandler = async event => {
+    createTestHandler = event => {
         event.preventDefault();
 
-        try {
-            await axios.post('/quizes.json', this.state.quiz)
-            
-            // After adding new test let's update 'create test' block
-            this.setState({
-                quiz: [],
-                isFormValid: false,
-                formControls: createFormControls(),
-                rightAnswerId: 1
-            })
-        } 
-        catch(e) {
-            console.log(e);
-        }
-
-        // axios.post('https://react-quiz-37bcb-default-rtdb.europe-west1.firebasedatabase.app/quizes.json', this.state.quiz)
-        // .then(response => {
-        //     console.log(response)
-        // })
-        // .catch(error => console.log(error))
-
-
-
+        // After adding new test let's update 'create test' block
+        this.setState({
+            isFormValid: false,
+            formControls: createFormControls(),
+            rightAnswerId: 1
+        })
+        this.props.finishTestCreate()
     }
 
     changeHandler = (value, controlName) => {
@@ -176,7 +157,7 @@ export default class QuizCreator extends Component {
                         <Button
                             type="success"
                             onClick={this.createTestHandler}
-                            disabled={this.state.quiz.length === 0}>
+                            disabled={this.props.quiz.length === 0}>
                             Create test
                         </Button>
                     </form>
@@ -185,3 +166,18 @@ export default class QuizCreator extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        quiz: state.create.quiz
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        createTestHandler: item => dispatch(createTestHandler(item)),
+        finishTestCreate: () => dispatch(finishTestCreate())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(QuizCreator)
