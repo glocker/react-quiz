@@ -1,5 +1,14 @@
 import axios from '../../axios/axios-quiz';
-import { FETCH_QUIZES_ERROR, FETCH_QUIZES_START, FETCH_QUIZES_SUCCESS, FETCH_QUIZ_SUCCESS, QUIZ_SET_STATE, FINISH_QUIZ, QUIZ_NEXT_QUESTION, QUIZ_RETRY } from './actionTypes';
+import {
+    FETCH_QUIZES_ERROR,
+    FETCH_QUIZES_START,
+    FETCH_QUIZES_SUCCESS,
+    FETCH_QUIZ_SUCCESS,
+    QUIZ_SET_STATE,
+    FINISH_QUIZ,
+    QUIZ_NEXT_QUESTION,
+    QUIZ_RETRY
+} from './actionTypes';
 
 
 export function fetchQuizes() {

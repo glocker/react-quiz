@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5815e511-c62e-4dfb-b1db-c52ba2096b52" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Quiz/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Quiz/Quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/quiz.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1zrsC6DwV7FUKXONJljjLANOEJg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -49,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jsp-193.5662.65.zip" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -76,21 +83,17 @@
       <workItem from="1647615493438" duration="290000" />
       <workItem from="1647615871604" duration="778000" />
       <workItem from="1647618746192" duration="26000" />
+      <workItem from="1649081018126" duration="46000" />
+      <workItem from="1649081086828" duration="67000" />
+      <workItem from="1649081177656" duration="25000" />
+      <workItem from="1649081206160" duration="1513000" />
+      <workItem from="1649086878251" duration="332000" />
+      <workItem from="1649176023408" duration="1777000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="877" y="338" key="FileChooserDialogImpl" timestamp="1647615770437">
-      <screen x="0" y="0" width="2194" height="1194" />
-    </state>
-    <state x="877" y="338" key="FileChooserDialogImpl/3840.904.1536.808/0.0.2194.1194@0.0.2194.1194" timestamp="1647615770437" />
-    <state x="606" y="242" key="SettingsEditor" timestamp="1647615785328">
-      <screen x="0" y="0" width="2194" height="1194" />
-    </state>
-    <state x="606" y="242" key="SettingsEditor/3840.904.1536.808/0.0.2194.1194@0.0.2194.1194" timestamp="1647615785328" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

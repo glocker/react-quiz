@@ -20,18 +20,15 @@ class Quiz extends Component {
     render() {
         return (
             <div className={classes.Quiz}>
-                
-
                 <div className={classes.QuizWrapper}>
                     <h1>Answer all questions</h1>
-
-                    { this.props.loading && this.props.quiz
-                        ? <Loader /> // Show loader
+                    { this.props.loading || !this.props.quiz
+                        ? <Loader />
                         : this.props.isFinished 
                             ? <FinishedQuiz 
                                 results={this.props.results}
                                 quiz={this.props.quiz}
-                                onRetry={this.props.retryHandler}
+                                onRetry={this.props.retryQuiz}
                             /> 
                             
                             :   <ActiveQuiz 
