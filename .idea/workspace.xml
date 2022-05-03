@@ -7,7 +7,7 @@
     <list default="true" id="5815e511-c62e-4dfb-b1db-c52ba2096b52" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/QuizCreator/QuizCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/QuizCreator/QuizCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Auth/Auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/rootReducer.js" afterDir="false" />
     </list>
@@ -89,7 +89,15 @@
       <workItem from="1649081177656" duration="25000" />
       <workItem from="1649081206160" duration="1513000" />
       <workItem from="1649086878251" duration="332000" />
-      <workItem from="1649176023408" duration="3701000" />
+      <workItem from="1649176023408" duration="4295000" />
+      <workItem from="1649490917576" duration="137000" />
+      <workItem from="1649860438013" duration="6000" />
+      <workItem from="1649954872925" duration="454000" />
+      <workItem from="1649955770052" duration="91000" />
+      <workItem from="1650380394209" duration="1435000" />
+      <workItem from="1650473170463" duration="25000" />
+      <workItem from="1651559019388" duration="1537000" />
+      <workItem from="1651582513464" duration="6020000" />
     </task>
     <servers />
   </component>
